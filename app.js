@@ -1,9 +1,21 @@
 const express = require('express');
 
+const hbs = require('hbs');
+
+hbs.registerPartials(__dirname + '/views/partials');
+
 const app = express();
 
+app.set('view engine', 'hbs');
+
+app.set('views', __dirname + '/views');
+
+app.use(express.static('public'));
+
+app.locals.pageTitle = 'My Application';
+
 app.get('/', (request, response) => {
-  response.sendFile(__dirname + '/views/home.html');
+  response.render('home', { pageTitle: 'Adrian Newey', text: 'Lorem ipsum.' });
 });
 
 // app.get('/home', (request, response) => {
@@ -11,26 +23,28 @@ app.get('/', (request, response) => {
 // });
 
 app.get('/about', (request, response) => {
-  response.sendFile(__dirname + '/views/about.html');
+  response.render('about', { pageTitle: 'About', text: 'Lorem ipsum dolor.' });
 });
 
 app.get('/works', (request, response) => {
-  response.sendFile(__dirname + '/views/works.html');
+  response.render('works', {
+    pageTitle: 'Works',
+    text: 'Lorem ipsum dolor sit.'
+  });
 });
 
 app.get('/gallery', (request, response) => {
-  response.sendFile(__dirname + '/views/gallery.html');
+  response.render('gallery', {
+    pageTitle: 'Gallery',
+    text: 'Lorem ipsum dolor sit amet.'
+  });
 });
-
-app.use(express.static('public'));
 
 app.get('*', (request, response) => {
-  response.send('Page does not exist');
+  response.render('pagedne', {
+    pageTitle: 'Error',
+    text: 'Page does not exist.'
+  });
 });
-
-// dsjkdh
-// dfjw
-// jafk
-// ajef
 
 app.listen(5300);

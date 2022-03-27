@@ -1,0 +1,85 @@
+/* @font-face {
+  font-family: 'ronet';
+  src: url('/public/Ronet\ DEMO.ttf');
+} */
+/* 
+@font-face {
+  font-family: 'ronet';
+  src: url('/public/Ronet\ DEMO.ttf') format('truetype');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bad+Script&family=Bebas+Neue&family=Bungee+Inline&family=Homemade+Apple&family=Michroma&family=Montserrat:wght@200&family=Mr+Dafoe&family=Nothing+You+Could+Do&family=Oswald&family=PT+Sans+Narrow:wght@400;700&family=Racing+Sans+One&family=Urbanist:wght@100&display=swap');
+
+body {
+  margin: 0 200 0 0;
+  background-image: linear-gradient(0.25turn, #51284f, 50%, #02152b);
+  color: white;
+  width: 100%;
+  /* display: flex; */
+  font-family: 'Michroma', sans-serif;
+}
+
+body h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 114px;
+}
+
+/* body h2 {
+  font-family: 'Racing Sans One', cursive;
+} */
+
+#introduction {
+  margin-right: 40;
+  text-align: right;
+  width: 90%;
+}
+
+#introduction p {
+  justify-content: flex-end;
+  margin-top: 20%;
+}
+
+#introduction h2 {
+  justify-content: flex-end;
+  margin-top: 2%;
+}
+
+#introduction h1 {
+  justify-content: flex-end;
+  margin-bottom: 2%;
+}
+
+#image {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+ul li {
+  display: block;
+}
+ul a {
+  color: white;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.horizontal {
+  margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
