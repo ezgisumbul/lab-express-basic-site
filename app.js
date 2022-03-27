@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.locals.pageTitle = 'My Application';
 
 app.get('/', (request, response) => {
-  response.render('home', { pageTitle: 'Adrian Newey', text: 'Lorem ipsum.' });
+  response.render('home', { pageTitle: 'Adrian Newey', text: 'Lorem ipsum.', altImage: 'car image' });
 });
 
 // app.get('/home', (request, response) => {
